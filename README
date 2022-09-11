@@ -1,11 +1,14 @@
-This small function tries to emulate DOMContentLoaded event in a cross-browser manner.
+This small function tries to emulate `DOMContentLoaded` event in a cross-browser manner.
 
 To use this function, just include the file in your document
 
+```
 <script type="text/javascript" src="whenReady.js"></script>
+```
 
-and call the function as many times you want
+and call the function as many times you need
 
+```
 <script type="text/javascript">
 whenReady(function () {
     console.log("1");
@@ -21,5 +24,7 @@ setTimeout(function () {
     });
 }, 15000);
 </script>
+```
 
-The function assures all the callbacks will be called when the document is ready, in the order they were registered. If you call whenReady after the document has loaded, the callback is called immediately. Just make sure, none of the callbacks throws errors, because the function will stop calling remaining callbacks.
+The function assures all the callbacks are called when the document is ready, in the order they were registered. If you call `whenReady` after the document has loaded, the callback is called immediately.
+Just make sure, none of the callbacks throws errors, because the function will stop calling remaining callbacks.
